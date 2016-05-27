@@ -211,7 +211,14 @@ def main():
 
     histfit_arrays['L2METrel'][0] 	     = e['metrel']*GeVunit
     histfit_arrays['L2Mll'][0] 		     = e['mll']*GeVunit
+    
+    
+    relSigXSecErr = xsec_data[e['finalState']]['Tot_error']
     histfit_arrays['L2TotalWeight'][0] 	     = totweight 
+    histfit_arrays['syst_XSUP'][0]          = 1+relSigXSecErr
+    histfit_arrays['syst_XSDOWN'][0]        = 1-relSigXSecErr
+    
+    
     histfit_arrays['L2nCentralLightJets'][0] = e['NL20']
     histfit_arrays['L2nCentralBJets'][0]     = e['NB20new']
     histfit_arrays['L2nForwardJets'][0]      = e['NF30new']

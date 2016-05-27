@@ -16,6 +16,8 @@ branch_defs = [
   ('Float_t','L2METrel'),
   ('Float_t','L2Mll'),
   ('Double_t','L2TotalWeight'),
+  ('Double_t','syst_XSUP'),
+  ('Double_t','syst_XSDOWN'),
   ('Int_t','L2nCentralLightJets'),
   ('Int_t','L2nCentralBJets'),
   ('Int_t','L2nForwardJets'),
